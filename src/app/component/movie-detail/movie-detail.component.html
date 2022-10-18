@@ -1,0 +1,32 @@
+<div class="block">
+  <img [src]="movie.image" [alt]="movie.title">
+  <p class="title-text"> {{movie.title}}</p>
+  <p>{{movie.description}}</p>
+  <p>{{movie.producer}}</p>
+  <p>{{movie.rating}}</p>
+</div>
+
+
+<table class="table table-hover">
+<thead>
+<tr>
+  <th scope="col">Время</th>
+  <th scope="col">Цена</th>
+  <th scope="col">Кинозал</th>
+  <th scope="col">Язык дубляжа</th>
+  <th scope="col"></th>
+</tr>
+</thead>
+<tbody>
+  <tr *ngFor="let seans of movie.movie_seansy">
+    <td>{{seans.time.replace(":00", "")}} </td>
+    <td>{{seans.price}} тг</td>
+    <td>{{seans.kinozal_id}}</td>
+    <td>{{seans.language}}</td>
+    <td>
+      <a routerLink="/seans/{{1}}">
+      <button class="btn btn-success" type="submit">Купить билет</button>
+      </a></td>
+  </tr>
+</tbody>
+</table>

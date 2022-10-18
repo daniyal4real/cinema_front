@@ -1,0 +1,16 @@
+.block {
+  display: flex;
+  padding: 50px;
+}
+
+
+.seat-block {
+  text-align: center;
+  width: 60px;
+  height: 60px;
+  padding: 10px;
+  color: white;
+  margin-left: 10px;
+  background-color: green;
+  border-radius: 9px;
+}

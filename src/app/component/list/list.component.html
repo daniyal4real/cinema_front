@@ -1,0 +1,6 @@
+<input type="text" class="form-control" aria-label="Sizing" placeholder="Название фильма" [(ngModel)]="term"/>
+
+<div class="main-block" *ngIf="movies$ | async as movies">
+    <app-movie *ngFor="let movie of movies | filterMovies: term; let i = index" 
+    [movie]="movie"></app-movie>
+</div>
